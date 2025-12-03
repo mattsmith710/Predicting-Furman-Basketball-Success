@@ -10,19 +10,6 @@ furman.head()
 furman.tail()
 ```
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-&#10;    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-&#10;    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-
 |  | Instance | Date | Location | Opp | Type | Tm | Opp.1 | OT? | FG_Furman | FGA_Furman | ... | FT%\_Opponent | ORB_Opponent | DRB_Opponent | TRB_Opponent | AST_Opponent | STL_Opponent | BLK_Opponent | TOV_Opponent | PF_Opponent | Result |
 |----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
 | 484 | 485 | 2/26/11 | Home | Wofford | REG (Conf) | 65 | 79 | No | 19 | 41 | ... | 0.579 | 15 | 16 | 31 | 15 | 6 | 0 | 7 | 19 | Lose |
