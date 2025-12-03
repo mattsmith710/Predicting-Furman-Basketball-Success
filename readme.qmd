@@ -2,6 +2,10 @@
 title: "Furman Basketball Predictions"
 author: "Matt Smith"
 format: gfm
+execute:
+    warning: false
+    message: false
+    error: false
 ---
 
 ```{python}
@@ -14,6 +18,7 @@ furman.tail()
 ```
 
 ```{python}
+#| output: asis
 furman.describe(include= 'all')
 ```
 

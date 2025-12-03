@@ -361,7 +361,7 @@ Now that everything is prepared, I can fit the model.
 tree_clf.fit(X_trans, y_enc)
 ```
 
-<style>#sk-container-id-1 {
+<style>#sk-container-id-3 {
   /* Definition of color scheme common for light and dark mode */
   --sklearn-color-text: #000;
   --sklearn-color-text-muted: #666;
@@ -389,13 +389,13 @@ tree_clf.fit(X_trans, y_enc)
     --sklearn-color-icon: #878787;
   }
 }
-&#10;#sk-container-id-1 {
+&#10;#sk-container-id-3 {
   color: var(--sklearn-color-text);
 }
-&#10;#sk-container-id-1 pre {
+&#10;#sk-container-id-3 pre {
   padding: 0;
 }
-&#10;#sk-container-id-1 input.sk-hidden--visually {
+&#10;#sk-container-id-3 input.sk-hidden--visually {
   border: 0;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
@@ -406,14 +406,14 @@ tree_clf.fit(X_trans, y_enc)
   position: absolute;
   width: 1px;
 }
-&#10;#sk-container-id-1 div.sk-dashed-wrapped {
+&#10;#sk-container-id-3 div.sk-dashed-wrapped {
   border: 1px dashed var(--sklearn-color-line);
   margin: 0 0.4em 0.5em 0.4em;
   box-sizing: border-box;
   padding-bottom: 0.4em;
   background-color: var(--sklearn-color-background);
 }
-&#10;#sk-container-id-1 div.sk-container {
+&#10;#sk-container-id-3 div.sk-container {
   /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
      but bootstrap.min.css set `[hidden] { display: none !important; }`
      so we also need the `!important` here to be able to override the
@@ -422,7 +422,7 @@ tree_clf.fit(X_trans, y_enc)
   display: inline-block !important;
   position: relative;
 }
-&#10;#sk-container-id-1 div.sk-text-repr-fallback {
+&#10;#sk-container-id-3 div.sk-text-repr-fallback {
   display: none;
 }
 &#10;div.sk-parallel-item,
@@ -435,36 +435,36 @@ div.sk-item {
   background-position: center center;
 }
 &#10;/* Parallel-specific style estimator block */
-&#10;#sk-container-id-1 div.sk-parallel-item::after {
+&#10;#sk-container-id-3 div.sk-parallel-item::after {
   content: "";
   width: 100%;
   border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
   flex-grow: 1;
 }
-&#10;#sk-container-id-1 div.sk-parallel {
+&#10;#sk-container-id-3 div.sk-parallel {
   display: flex;
   align-items: stretch;
   justify-content: center;
   background-color: var(--sklearn-color-background);
   position: relative;
 }
-&#10;#sk-container-id-1 div.sk-parallel-item {
+&#10;#sk-container-id-3 div.sk-parallel-item {
   display: flex;
   flex-direction: column;
 }
-&#10;#sk-container-id-1 div.sk-parallel-item:first-child::after {
+&#10;#sk-container-id-3 div.sk-parallel-item:first-child::after {
   align-self: flex-end;
   width: 50%;
 }
-&#10;#sk-container-id-1 div.sk-parallel-item:last-child::after {
+&#10;#sk-container-id-3 div.sk-parallel-item:last-child::after {
   align-self: flex-start;
   width: 50%;
 }
-&#10;#sk-container-id-1 div.sk-parallel-item:only-child::after {
+&#10;#sk-container-id-3 div.sk-parallel-item:only-child::after {
   width: 0;
 }
 &#10;/* Serial-specific style estimator block */
-&#10;#sk-container-id-1 div.sk-serial {
+&#10;#sk-container-id-3 div.sk-serial {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -479,13 +479,13 @@ clickable and can be expanded/collapsed.
 - Estimators will overwrite some part of the style using the `sk-estimator` class
 */
 &#10;/* Pipeline and ColumnTransformer style (default) */
-&#10;#sk-container-id-1 div.sk-toggleable {
+&#10;#sk-container-id-3 div.sk-toggleable {
   /* Default theme specific background. It is overwritten whether we have a
   specific estimator or a Pipeline/ColumnTransformer */
   background-color: var(--sklearn-color-background);
 }
 &#10;/* Toggleable label */
-#sk-container-id-1 label.sk-toggleable__label {
+#sk-container-id-3 label.sk-toggleable__label {
   cursor: pointer;
   display: flex;
   width: 100%;
@@ -497,97 +497,97 @@ clickable and can be expanded/collapsed.
   justify-content: space-between;
   gap: 0.5em;
 }
-&#10;#sk-container-id-1 label.sk-toggleable__label .caption {
+&#10;#sk-container-id-3 label.sk-toggleable__label .caption {
   font-size: 0.6rem;
   font-weight: lighter;
   color: var(--sklearn-color-text-muted);
 }
-&#10;#sk-container-id-1 label.sk-toggleable__label-arrow:before {
+&#10;#sk-container-id-3 label.sk-toggleable__label-arrow:before {
   /* Arrow on the left of the label */
   content: "▸";
   float: left;
   margin-right: 0.25em;
   color: var(--sklearn-color-icon);
 }
-&#10;#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {
+&#10;#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {
   color: var(--sklearn-color-text);
 }
 &#10;/* Toggleable content - dropdown */
-&#10;#sk-container-id-1 div.sk-toggleable__content {
+&#10;#sk-container-id-3 div.sk-toggleable__content {
   display: none;
   text-align: left;
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
 }
-&#10;#sk-container-id-1 div.sk-toggleable__content.fitted {
+&#10;#sk-container-id-3 div.sk-toggleable__content.fitted {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
-&#10;#sk-container-id-1 div.sk-toggleable__content pre {
+&#10;#sk-container-id-3 div.sk-toggleable__content pre {
   margin: 0.2em;
   border-radius: 0.25em;
   color: var(--sklearn-color-text);
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
 }
-&#10;#sk-container-id-1 div.sk-toggleable__content.fitted pre {
+&#10;#sk-container-id-3 div.sk-toggleable__content.fitted pre {
   /* unfitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
-&#10;#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+&#10;#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
   display: block;
   width: 100%;
   overflow: visible;
 }
-&#10;#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+&#10;#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
   content: "▾";
 }
 &#10;/* Pipeline/ColumnTransformer-specific style */
-&#10;#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+&#10;#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-unfitted-level-2);
 }
-&#10;#sk-container-id-1 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+&#10;#sk-container-id-3 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
   background-color: var(--sklearn-color-fitted-level-2);
 }
 &#10;/* Estimator-specific style */
 &#10;/* Colorize estimator box */
-#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-2);
 }
-&#10;#sk-container-id-1 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+&#10;#sk-container-id-3 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-2);
 }
-&#10;#sk-container-id-1 div.sk-label label.sk-toggleable__label,
-#sk-container-id-1 div.sk-label label {
+&#10;#sk-container-id-3 div.sk-label label.sk-toggleable__label,
+#sk-container-id-3 div.sk-label label {
   /* The background is the default theme color */
   color: var(--sklearn-color-text-on-default-background);
 }
 &#10;/* On hover, darken the color of the background */
-#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {
+#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 &#10;/* Label box, darken color on hover, fitted */
-#sk-container-id-1 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+#sk-container-id-3 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-fitted-level-2);
 }
 &#10;/* Estimator label */
-&#10;#sk-container-id-1 div.sk-label label {
+&#10;#sk-container-id-3 div.sk-label label {
   font-family: monospace;
   font-weight: bold;
   display: inline-block;
   line-height: 1.2em;
 }
-&#10;#sk-container-id-1 div.sk-label-container {
+&#10;#sk-container-id-3 div.sk-label-container {
   text-align: center;
 }
 &#10;/* Estimator-specific */
-#sk-container-id-1 div.sk-estimator {
+#sk-container-id-3 div.sk-estimator {
   font-family: monospace;
   border: 1px dotted var(--sklearn-color-border-box);
   border-radius: 0.25em;
@@ -596,16 +596,16 @@ clickable and can be expanded/collapsed.
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
 }
-&#10;#sk-container-id-1 div.sk-estimator.fitted {
+&#10;#sk-container-id-3 div.sk-estimator.fitted {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 &#10;/* on hover */
-#sk-container-id-1 div.sk-estimator:hover {
+#sk-container-id-3 div.sk-estimator:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-2);
 }
-&#10;#sk-container-id-1 div.sk-estimator.fitted:hover {
+&#10;#sk-container-id-3 div.sk-estimator.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-2);
 }
@@ -682,7 +682,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   display: block;
 }
 &#10;/* "?"-specific style due to the `<a>` HTML tag */
-&#10;#sk-container-id-1 a.estimator_doc_link {
+&#10;#sk-container-id-3 a.estimator_doc_link {
   float: right;
   font-size: 1rem;
   line-height: 1em;
@@ -696,19 +696,19 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   color: var(--sklearn-color-unfitted-level-1);
   border: var(--sklearn-color-unfitted-level-1) 1pt solid;
 }
-&#10;#sk-container-id-1 a.estimator_doc_link.fitted {
+&#10;#sk-container-id-3 a.estimator_doc_link.fitted {
   /* fitted */
   border: var(--sklearn-color-fitted-level-1) 1pt solid;
   color: var(--sklearn-color-fitted-level-1);
 }
 &#10;/* On hover */
-#sk-container-id-1 a.estimator_doc_link:hover {
+#sk-container-id-3 a.estimator_doc_link:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-3);
   color: var(--sklearn-color-background);
   text-decoration: none;
 }
-&#10;#sk-container-id-1 a.estimator_doc_link.fitted:hover {
+&#10;#sk-container-id-3 a.estimator_doc_link.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
@@ -764,7 +764,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
     height: 14px;
     cursor: pointer;
 }
-</style><body><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>DecisionTreeClassifier(max_depth=3, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>DecisionTreeClassifier</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.tree.DecisionTreeClassifier.html">?<span>Documentation for DecisionTreeClassifier</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
+</style><body><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>DecisionTreeClassifier(max_depth=3, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" checked><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>DecisionTreeClassifier</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.tree.DecisionTreeClassifier.html">?<span>Documentation for DecisionTreeClassifier</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
         <div class="estimator-table">
             <details>
                 <summary>Parameters</summary>
@@ -842,16 +842,7 @@ v = viz_model.view(fontname="DejaVu Sans")
 v
 ```
 
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-
-![](readme_files/figure-commonmark/cell-18-output-2.svg)
+![](readme_files/figure-commonmark/cell-18-output-1.svg)
 
 When I look at the decision tree, shooting percentages clearly stand out
 as the strongest indicators of a Furman win. The model chooses opponent
@@ -1106,7 +1097,7 @@ class_names = le.classes_.tolist()
 tree_clf.fit(X_trans, y_enc)
 ```
 
-<style>#sk-container-id-2 {
+<style>#sk-container-id-4 {
   /* Definition of color scheme common for light and dark mode */
   --sklearn-color-text: #000;
   --sklearn-color-text-muted: #666;
@@ -1134,13 +1125,13 @@ tree_clf.fit(X_trans, y_enc)
     --sklearn-color-icon: #878787;
   }
 }
-&#10;#sk-container-id-2 {
+&#10;#sk-container-id-4 {
   color: var(--sklearn-color-text);
 }
-&#10;#sk-container-id-2 pre {
+&#10;#sk-container-id-4 pre {
   padding: 0;
 }
-&#10;#sk-container-id-2 input.sk-hidden--visually {
+&#10;#sk-container-id-4 input.sk-hidden--visually {
   border: 0;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1151,14 +1142,14 @@ tree_clf.fit(X_trans, y_enc)
   position: absolute;
   width: 1px;
 }
-&#10;#sk-container-id-2 div.sk-dashed-wrapped {
+&#10;#sk-container-id-4 div.sk-dashed-wrapped {
   border: 1px dashed var(--sklearn-color-line);
   margin: 0 0.4em 0.5em 0.4em;
   box-sizing: border-box;
   padding-bottom: 0.4em;
   background-color: var(--sklearn-color-background);
 }
-&#10;#sk-container-id-2 div.sk-container {
+&#10;#sk-container-id-4 div.sk-container {
   /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
      but bootstrap.min.css set `[hidden] { display: none !important; }`
      so we also need the `!important` here to be able to override the
@@ -1167,7 +1158,7 @@ tree_clf.fit(X_trans, y_enc)
   display: inline-block !important;
   position: relative;
 }
-&#10;#sk-container-id-2 div.sk-text-repr-fallback {
+&#10;#sk-container-id-4 div.sk-text-repr-fallback {
   display: none;
 }
 &#10;div.sk-parallel-item,
@@ -1180,36 +1171,36 @@ div.sk-item {
   background-position: center center;
 }
 &#10;/* Parallel-specific style estimator block */
-&#10;#sk-container-id-2 div.sk-parallel-item::after {
+&#10;#sk-container-id-4 div.sk-parallel-item::after {
   content: "";
   width: 100%;
   border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
   flex-grow: 1;
 }
-&#10;#sk-container-id-2 div.sk-parallel {
+&#10;#sk-container-id-4 div.sk-parallel {
   display: flex;
   align-items: stretch;
   justify-content: center;
   background-color: var(--sklearn-color-background);
   position: relative;
 }
-&#10;#sk-container-id-2 div.sk-parallel-item {
+&#10;#sk-container-id-4 div.sk-parallel-item {
   display: flex;
   flex-direction: column;
 }
-&#10;#sk-container-id-2 div.sk-parallel-item:first-child::after {
+&#10;#sk-container-id-4 div.sk-parallel-item:first-child::after {
   align-self: flex-end;
   width: 50%;
 }
-&#10;#sk-container-id-2 div.sk-parallel-item:last-child::after {
+&#10;#sk-container-id-4 div.sk-parallel-item:last-child::after {
   align-self: flex-start;
   width: 50%;
 }
-&#10;#sk-container-id-2 div.sk-parallel-item:only-child::after {
+&#10;#sk-container-id-4 div.sk-parallel-item:only-child::after {
   width: 0;
 }
 &#10;/* Serial-specific style estimator block */
-&#10;#sk-container-id-2 div.sk-serial {
+&#10;#sk-container-id-4 div.sk-serial {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1224,13 +1215,13 @@ clickable and can be expanded/collapsed.
 - Estimators will overwrite some part of the style using the `sk-estimator` class
 */
 &#10;/* Pipeline and ColumnTransformer style (default) */
-&#10;#sk-container-id-2 div.sk-toggleable {
+&#10;#sk-container-id-4 div.sk-toggleable {
   /* Default theme specific background. It is overwritten whether we have a
   specific estimator or a Pipeline/ColumnTransformer */
   background-color: var(--sklearn-color-background);
 }
 &#10;/* Toggleable label */
-#sk-container-id-2 label.sk-toggleable__label {
+#sk-container-id-4 label.sk-toggleable__label {
   cursor: pointer;
   display: flex;
   width: 100%;
@@ -1242,97 +1233,97 @@ clickable and can be expanded/collapsed.
   justify-content: space-between;
   gap: 0.5em;
 }
-&#10;#sk-container-id-2 label.sk-toggleable__label .caption {
+&#10;#sk-container-id-4 label.sk-toggleable__label .caption {
   font-size: 0.6rem;
   font-weight: lighter;
   color: var(--sklearn-color-text-muted);
 }
-&#10;#sk-container-id-2 label.sk-toggleable__label-arrow:before {
+&#10;#sk-container-id-4 label.sk-toggleable__label-arrow:before {
   /* Arrow on the left of the label */
   content: "▸";
   float: left;
   margin-right: 0.25em;
   color: var(--sklearn-color-icon);
 }
-&#10;#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {
+&#10;#sk-container-id-4 label.sk-toggleable__label-arrow:hover:before {
   color: var(--sklearn-color-text);
 }
 &#10;/* Toggleable content - dropdown */
-&#10;#sk-container-id-2 div.sk-toggleable__content {
+&#10;#sk-container-id-4 div.sk-toggleable__content {
   display: none;
   text-align: left;
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
 }
-&#10;#sk-container-id-2 div.sk-toggleable__content.fitted {
+&#10;#sk-container-id-4 div.sk-toggleable__content.fitted {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
-&#10;#sk-container-id-2 div.sk-toggleable__content pre {
+&#10;#sk-container-id-4 div.sk-toggleable__content pre {
   margin: 0.2em;
   border-radius: 0.25em;
   color: var(--sklearn-color-text);
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
 }
-&#10;#sk-container-id-2 div.sk-toggleable__content.fitted pre {
+&#10;#sk-container-id-4 div.sk-toggleable__content.fitted pre {
   /* unfitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
-&#10;#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+&#10;#sk-container-id-4 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
   display: block;
   width: 100%;
   overflow: visible;
 }
-&#10;#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+&#10;#sk-container-id-4 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
   content: "▾";
 }
 &#10;/* Pipeline/ColumnTransformer-specific style */
-&#10;#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+&#10;#sk-container-id-4 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-unfitted-level-2);
 }
-&#10;#sk-container-id-2 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+&#10;#sk-container-id-4 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
   background-color: var(--sklearn-color-fitted-level-2);
 }
 &#10;/* Estimator-specific style */
 &#10;/* Colorize estimator box */
-#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-4 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-2);
 }
-&#10;#sk-container-id-2 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+&#10;#sk-container-id-4 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-2);
 }
-&#10;#sk-container-id-2 div.sk-label label.sk-toggleable__label,
-#sk-container-id-2 div.sk-label label {
+&#10;#sk-container-id-4 div.sk-label label.sk-toggleable__label,
+#sk-container-id-4 div.sk-label label {
   /* The background is the default theme color */
   color: var(--sklearn-color-text-on-default-background);
 }
 &#10;/* On hover, darken the color of the background */
-#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {
+#sk-container-id-4 div.sk-label:hover label.sk-toggleable__label {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 &#10;/* Label box, darken color on hover, fitted */
-#sk-container-id-2 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+#sk-container-id-4 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-fitted-level-2);
 }
 &#10;/* Estimator label */
-&#10;#sk-container-id-2 div.sk-label label {
+&#10;#sk-container-id-4 div.sk-label label {
   font-family: monospace;
   font-weight: bold;
   display: inline-block;
   line-height: 1.2em;
 }
-&#10;#sk-container-id-2 div.sk-label-container {
+&#10;#sk-container-id-4 div.sk-label-container {
   text-align: center;
 }
 &#10;/* Estimator-specific */
-#sk-container-id-2 div.sk-estimator {
+#sk-container-id-4 div.sk-estimator {
   font-family: monospace;
   border: 1px dotted var(--sklearn-color-border-box);
   border-radius: 0.25em;
@@ -1341,16 +1332,16 @@ clickable and can be expanded/collapsed.
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
 }
-&#10;#sk-container-id-2 div.sk-estimator.fitted {
+&#10;#sk-container-id-4 div.sk-estimator.fitted {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 &#10;/* on hover */
-#sk-container-id-2 div.sk-estimator:hover {
+#sk-container-id-4 div.sk-estimator:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-2);
 }
-&#10;#sk-container-id-2 div.sk-estimator.fitted:hover {
+&#10;#sk-container-id-4 div.sk-estimator.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-2);
 }
@@ -1427,7 +1418,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   display: block;
 }
 &#10;/* "?"-specific style due to the `<a>` HTML tag */
-&#10;#sk-container-id-2 a.estimator_doc_link {
+&#10;#sk-container-id-4 a.estimator_doc_link {
   float: right;
   font-size: 1rem;
   line-height: 1em;
@@ -1441,19 +1432,19 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   color: var(--sklearn-color-unfitted-level-1);
   border: var(--sklearn-color-unfitted-level-1) 1pt solid;
 }
-&#10;#sk-container-id-2 a.estimator_doc_link.fitted {
+&#10;#sk-container-id-4 a.estimator_doc_link.fitted {
   /* fitted */
   border: var(--sklearn-color-fitted-level-1) 1pt solid;
   color: var(--sklearn-color-fitted-level-1);
 }
 &#10;/* On hover */
-#sk-container-id-2 a.estimator_doc_link:hover {
+#sk-container-id-4 a.estimator_doc_link:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-3);
   color: var(--sklearn-color-background);
   text-decoration: none;
 }
-&#10;#sk-container-id-2 a.estimator_doc_link.fitted:hover {
+&#10;#sk-container-id-4 a.estimator_doc_link.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
@@ -1509,7 +1500,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
     height: 14px;
     cursor: pointer;
 }
-</style><body><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>DecisionTreeClassifier(max_depth=3, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>DecisionTreeClassifier</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.tree.DecisionTreeClassifier.html">?<span>Documentation for DecisionTreeClassifier</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
+</style><body><div id="sk-container-id-4" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>DecisionTreeClassifier(max_depth=3, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox" checked><label for="sk-estimator-id-4" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>DecisionTreeClassifier</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.tree.DecisionTreeClassifier.html">?<span>Documentation for DecisionTreeClassifier</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
         <div class="estimator-table">
             <details>
                 <summary>Parameters</summary>
@@ -1587,16 +1578,7 @@ v = viz_model.view(fontname="DejaVu Sans")
 v
 ```
 
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-    Ignoring fixed x limits to fulfill fixed data aspect with adjustable data limits.
-
-![](readme_files/figure-commonmark/cell-33-output-2.svg)
+![](readme_files/figure-commonmark/cell-33-output-1.svg)
 
 From the decision tree on SoCon games, a high eFG% comes out as the most
 important variable. This makes sense, because eFG% accounts for the
