@@ -10,7 +10,17 @@ execute:
 
 ```{python}
 import pandas as pd
-
+import re
+import matplotlib.pyplot as plt
+import statsmodels.formula.api as smf
+import numpy as np
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.preprocessing import LabelEncoder
+import dtreeviz
 furman = pd.read_csv("~/Downloads/Furman Basketball - Final.csv")
 
 furman.head()
@@ -22,10 +32,11 @@ furman.tail()
 furman.describe(include= 'all')
 ```
 
-Research Question
+# Research Question
 
 What attributes best predict a Furman Basketball win, and do these predictors change once the team enters conference play?
 
+# All Games Prediction
 To begin the analysis, I created a new binary outcome variable to make logistic regression possible. Specifically, I encoded game results such that Win = 1 and Loss = 0. This allows the model to estimate how different game attributes influence the probability of winning.
 
 ```{python}
@@ -38,7 +49,6 @@ Next, I used logistic regression to identify which variables most strongly predi
 Before fitting the model, I prepared the dataset by selecting and formatting the numeric variables. This step ensures that only appropriate predictors are included and that the logistic regression model runs correctly.
 
 ```{python}
-import re
 numeric_furman = furman.select_dtypes(include='number')
 numeric_furman.columns = [re.sub('1', 'one', x) for x in numeric_furman.columns]
 numeric_furman.columns = [re.sub('2', 'two', x) for x in numeric_furman.columns]
@@ -79,8 +89,6 @@ numeric_furman['Diff_FG'][0]
 Next, I generated scatterplots to check for complete or quasi-complete separation in the data. Separation can occur when a predictor perfectly distinguishes wins from losses, which can cause instability or failure in logistic regression estimation. Visualizing each variable against the win/loss outcome helps identify any predictors that may create this issue before fitting the model.
 
 ```{python}
-import matplotlib.pyplot as plt
-
 x_vars = [
     'Diff_FTA', 'Diff_ORB', 'Diff_DRB', 'Diff_AST',
     'Diff_STL', 'Diff_BLK', 'Diff_TOV', 'Diff_PF'
@@ -121,8 +129,6 @@ predictors = [col for col in predictors if col not in remove_cols]
 The scatterplot for Diff_AST showed evidence of separation, meaning that this variable almost perfectly distinguished wins from losses. To avoid instability in the logistic regression model, I removed Diff_AST along with any other variables that exhibited similar separation or multicollinearity issues.
 
 ```{python}
-import statsmodels.formula.api as smf
-
 model1 = smf.logit(
     formula = "Win_Binary ~ " + " + ".join(predictors), #needed AI to figure this one out
     data = numeric_furman
@@ -147,12 +153,6 @@ X = furman.drop(columns=["Result", "Win_Binary", "Tm", "Opp.1"]) # Set response 
 Next, I need to think about preprocessing. Since my dataset includes both numeric and categorical variables, I want a pipeline that handles each type properly. My plan is to identify the column types, build specific category mappings, and then apply one hot encoding to the categorical columns while imputing missing numeric values.
 
 ```{python}
-import numpy as np
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder
-from sklearn.pipeline import Pipeline
-from sklearn.impute import SimpleImputer
-
 # Identify column types
 cat_cols = X.select_dtypes(include=["object", "category"]).columns.tolist()
 num_cols = X.select_dtypes(include=[np.number]).columns.tolist()
@@ -184,8 +184,6 @@ preprocess = ColumnTransformer(
 Now that I know how my data will be preprocessed, I want to build the decision tree classifier. My thinking here is to keep the tree shallow so I can clearly see the strongest predictive split without the model overfitting.
 
 ```{python}
-from sklearn.tree import DecisionTreeClassifier, plot_tree
-
 tree_clf = DecisionTreeClassifier(random_state=123,
 max_depth=3)
 ```
@@ -193,7 +191,6 @@ max_depth=3)
 At this point, I need to actually transform the dataset using the preprocessing pipeline. I also need to encode the target variable so the model can interpret it correctly. Here is how I think about it and then implement it:
 
 ```{python}
-from sklearn.preprocessing import LabelEncoder
 X_trans = preprocess.fit_transform(X)
 
 # Encode target to integers
@@ -209,7 +206,6 @@ tree_clf.fit(X_trans, y_enc)
 ```
 
 ```{python}
-import dtreeviz
 viz_model = dtreeviz.model(
     tree_clf,
     X_train=X_trans,
@@ -225,7 +221,7 @@ v
 
 When I look at the decision tree, shooting percentages clearly stand out as the strongest indicators of a Furman win. The model chooses opponent field goal percentage as the very first split, which tells me that limiting how well the other team shoots is the most important high-level factor in predicting success.
 
-# SoCon
+# SoCon Prediction
 While looking at all the data together is helpful, I need to recognize the reality of mid-major basketball. It is extremely rare to reach the NCAA Tournament without winning the conference title. Because Furman plays in the SoCon, the non-conference schedule functions more as a testing ground to learn about the team’s strengths and weaknesses. What truly matters for Furman’s postseason hopes is the SoCon regular season and, especially, the conference tournament.
 
 Teams in the SoCon also scout each other during the non-conference slate and will tailor their game plans once they have film on you. Because of that, it can even be advantageous to keep some of your best offensive and defensive sets hidden until conference play begins. If this is the case, the most important variables for predicting wins may differ between non-conference and conference games. This is exactly why I want to separate the two and analyze whether the key predictors change once Furman enters SoCon play.
@@ -238,7 +234,6 @@ socon
 I am now going to rerun both the logistic regression and the decision tree, but this time I will focus only on SoCon games. My goal is to see whether the most important predictors of a Furman win change once conference play starts. I will use the same logic and code structure that I used above, just applied to the SoCon subset of the data.
 
 ```{python}
-import re
 numeric_socon = socon.select_dtypes(include='number')
 numeric_socon.columns = [re.sub('1', 'one', x) for x in numeric_socon.columns]
 numeric_socon.columns = [re.sub('2', 'two', x) for x in numeric_socon.columns]
@@ -278,8 +273,6 @@ numeric_socon['Diff_FG'][13]
 Now recheck for seperation:
 
 ```{python}
-import matplotlib.pyplot as plt
-
 x_vars = [
     'Diff_FTA', 'Diff_ORB', 'Diff_DRB', 'Diff_AST',
     'Diff_STL', 'Diff_BLK', 'Diff_TOV', 'Diff_PF'
@@ -341,12 +334,6 @@ X = socon.drop(columns=["Result", "Win_Binary", "Tm", "Opp.1"]) # Set response
 
 
 ```{python}
-import numpy as np
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder
-from sklearn.pipeline import Pipeline
-from sklearn.impute import SimpleImputer
-
 # Identify column types
 cat_cols = X.select_dtypes(include=["object", "category"]).columns.tolist()
 num_cols = X.select_dtypes(include=[np.number]).columns.tolist()
@@ -376,14 +363,11 @@ preprocess = ColumnTransformer(
 ```
 
 ```{python}
-from sklearn.tree import DecisionTreeClassifier, plot_tree
-
 tree_clf = DecisionTreeClassifier(random_state=123,
 max_depth=3)
 ```
 
 ```{python}
-from sklearn.preprocessing import LabelEncoder
 X_trans = preprocess.fit_transform(X)
 
 # Encode target to integers
@@ -397,7 +381,6 @@ tree_clf.fit(X_trans, y_enc)
 ```
 
 ```{python}
-import dtreeviz
 viz_model = dtreeviz.model(
     tree_clf,
     X_train=X_trans,
